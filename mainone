@@ -18,3 +18,4 @@ window.onkeypress(right, "Right")
 while True:
   head.forward(0.5)
   window.update()
+# THis is Python code
