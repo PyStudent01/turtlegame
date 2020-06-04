@@ -1,0 +1,20 @@
+import turtle
+
+head = turtle.Turtle()
+head.shape("turtle")
+
+window = turtle.Screen()
+
+def left():
+  head.left(10)
+
+def right():
+  head.right(10)
+
+window.listen()
+window.onkeypress(left, "Left")
+window.onkeypress(right, "Right")
+
+while True:
+  head.forward(0.5)
+  window.update()
