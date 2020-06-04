@@ -1,21 +1,25 @@
 import turtle
 
-head = turtle.Turtle()
-head.shape("turtle")
+snake = turtle.Turtle()
+snake.shape("turtle")
+snake.color("blue")
 
 window = turtle.Screen()
 
 def left():
-  head.left(10)
+  snake.left(10)
 
 def right():
-  head.right(10)
+  snake.right(10)
 
 window.listen()
 window.onkeypress(left, "Left")
 window.onkeypress(right, "Right")
 
 while True:
-  head.forward(0.5)
+  snake.forward(1)
+  if snake.xcor()> 200 or snake.xcor()<-200 or snake.ycor()>200 or snake.ycor()<-200:
+      break;
   window.update()
+
 # THis is Python code
